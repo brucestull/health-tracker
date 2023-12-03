@@ -55,7 +55,6 @@ INSTALLED_APPS = [
     "django.contrib.admindocs",
     "self_enquiry.apps.SelfEnquiryConfig",
     "vitals.apps.VitalsConfig",
-    "app_tracker.apps.AppTrackerConfig",
     "cbt.apps.CbtConfig",
     "pharma_tracker.apps.PharmaTrackerConfig",
 ]
