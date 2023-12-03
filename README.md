@@ -14,8 +14,8 @@ A brief description of what the application does and the problem it solves. Incl
 ## Installation
 
 ### Prerequisites
-- Python 3.x
-- Django 4.x
+- Python 3.11.6
+- Django 4.1.7
 
 ### Setup
 Instructions for setting up the development environment.
