@@ -168,7 +168,8 @@ if ENVIRONMENT == "production":
             "PASSWORD": database_config_variables["DATABASE_PASSWORD"],
         }
     }
-    ALLOWED_HOSTS = ["flynnt-knapp-8e0b83ab9b88.herokuapp.com"]
+    THIS_HOST = os.environ.get("THIS_HOST")
+    ALLOWED_HOSTS = [THIS_HOST]
     SECRET_KEY = os.environ.get("SECRET_KEY")
     STATIC_ROOT = BASE_DIR / "staticfiles"
 else:
