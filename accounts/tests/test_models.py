@@ -6,10 +6,6 @@ from vitals.models import BloodPressure
 A_TEST_USERNAME = "ACustomUser"
 ANOTHER_TEST_USERNAME = "AnotherCustomUser"
 
-CUSTOM_USER_REGISTRATION_ACCEPTED_HELP_TEXT = (
-    "Designates whether this user's registration has been accepted."
-)
-
 BLOOD_PRESSURE_SYSTOLIC_1 = 120
 BLOOD_PRESSURE_DIASTOLIC_1 = 80
 BLOOD_PRESSURE_PULSE_1 = 73
@@ -48,7 +44,8 @@ SYSTOLIC_AVERAGE = (
             BLOOD_PRESSURE_SYSTOLIC_2,
             BLOOD_PRESSURE_SYSTOLIC_3,
         ]
-    ) / 3
+    )
+    / 3
 )
 DIASTOLIC_AVERAGE = (
     sum(
@@ -57,7 +54,8 @@ DIASTOLIC_AVERAGE = (
             BLOOD_PRESSURE_DIASTOLIC_2,
             BLOOD_PRESSURE_DIASTOLIC_3,
         ]
-    ) / 3
+    )
+    / 3
 )
 SYSTOLIC_MEDIAN = sorted(
     [
@@ -150,7 +148,7 @@ class CustomUserModelTest(TestCase):
             user._meta.get_field(
                 "registration_accepted",
             ).help_text,
-            CUSTOM_USER_REGISTRATION_ACCEPTED_HELP_TEXT,
+            "Designates whether this user's registration has been accepted.",
         )
 
     def test_get_blood_pressure_range_method(self):
